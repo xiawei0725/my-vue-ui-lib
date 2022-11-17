@@ -1,0 +1,8 @@
+{
+  "include": [
+    "./lib/components/**/*.vue"
+  ],
+  "title": "xsw-ui-doc",
+  "genType": "docute",
+  "outDir": "./docs"
+}

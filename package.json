@@ -1,10 +1,12 @@
 {
-  "name": "my-lib",
-  "version": "0.1.0",
-  "private": true,
+  "name": "xsw-ui",
+  "version": "0.0.1",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "dev": "vue-cli-service serve",
+    "build:lib": "vue-cli-service build --target lib --name xsw-ui  lib/index.js",
+    "build:css": "gulp sass",
+    "build": "npm run build:lib && npm run build:css",
+    "build_doc": "vuese gen && vuese serve --open"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -13,8 +15,18 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^5.1.0",
     "sass": "^1.32.7",
     "sass-loader": "^12.0.0",
-    "vue-template-compiler": "^2.6.14"
-  }
+    "vue-template-compiler": "^2.6.14",
+    "vuese": "^1.4.7"
+  },
+  "author": "xw",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/xsw-ui.umd.min.js"
 }
